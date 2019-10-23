@@ -1,26 +1,26 @@
-public class GPA
+public class Fjord
 {
     public static void main(String[] args)
     {
-        Vehicle takk       = new Vehicle("takk"       , "Sedan" , 50 , 8   );
-        Vehicle beklager   = new Vehicle("beklager"   , "Sedan" , 40 , 7.5 );
-        Vehicle vakker     = new Vehicle("vakker"     , "SUV"   , 50 , 5   );
-        Vehicle stygg      = new Vehicle("stygg"      , "SUV"   , 40 , 6   );
-        Vehicle vanskellig = new Vehicle("vanskellig" , "Truck" , 50 , 4.75);
-        Vehicle lastebil   = new Vehicle("lastebil"   , "Truck" , 40 , 5.5 );
+        Vehicle takk       = new Vehicle("Takk"       , "Sedan" , 40 , 9.5 );
+        Vehicle beklager   = new Vehicle("Beklager"   , "Sedan" , 45 , 7.5 );
+        Vehicle vakker     = new Vehicle("Vakker"     , "SUV"   , 60 , 7.5 );
+        Vehicle stygg      = new Vehicle("Stygg"      , "SUV"   , 50 , 9   );
+        Vehicle vanskellig = new Vehicle("Vanskellig" , "Truck" , 60 , 8.75);
+        Vehicle lastebil   = new Vehicle("Lastebil"   , "Truck" , 70 , 5.5 );
 
-        mpgStatement( takk       .calculateMPG()       );
-        mpgStatement( beklager   .calculateMPG()   );
-        mpgStatement( vakker     .calculateMPG()     );
-        mpgStatement( stygg      .calculateMPG()      );
-        mpgStatement( vanskellig .calculateMPG() );
-        mpgStatement( lastebil   .calculateMPG()   );
+        takk.       mpgStatement( takk       .calculateMPG() );
+        beklager.   mpgStatement( beklager   .calculateMPG() );
+        vakker.     mpgStatement( vakker     .calculateMPG() );
+        stygg.      mpgStatement( stygg      .calculateMPG() );
+        vanskellig. mpgStatement( vanskellig .calculateMPG() );
+        lastebil.   mpgStatement( lastebil   .calculateMPG() );
 
-        govPassFail( takk.calculateMPG()       );
-        govPassFail( beklager.calculateMPG()   );
-        govPassFail( vakker.calculateMPG()     );
-        govPassFail( stygg.calculateMPG()      );
-        govPassFail( vanskellig.calculateMPG() );
-        govPassFail( lastebil.calculateMPG()   );
+        takk.       govStatement( takk.       govPassFail( takk       .calculateMPG() ) );
+        beklager.   govStatement( beklager.   govPassFail( beklager   .calculateMPG() ) );
+        vakker.     govStatement( vakker.     govPassFail( vakker     .calculateMPG() ) );
+        stygg.      govStatement( stygg.      govPassFail( stygg      .calculateMPG() ) );
+        vanskellig. govStatement( vanskellig. govPassFail( vanskellig .calculateMPG() ) );
+        lastebil.   govStatement( lastebil.   govPassFail( lastebil   .calculateMPG() ) );
     }
 }
